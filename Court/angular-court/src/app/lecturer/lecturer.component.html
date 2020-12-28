@@ -1,0 +1,74 @@
+
+
+<h1 style="text-align: center; padding-top: 4%;">Lecturer Details</h1>
+<div style="text-align:center; align-items: center;padding-top: 50px;cursor:pointer">
+<!-- table-striped -->
+  <table class="center table-hover content-table;">
+    <thead>
+      <tr style="text-align: center;">
+        <th>Lecturer ID</th>
+        <th>Lecturer Name</th>
+        <th>Department</th>
+        <th>Attendance of the person</th>
+        <th>Marks sheet</th>
+        <th>Suggestion or Assignment</th>
+      </tr>
+    </thead>
+  </table>
+</div>
+
+
+
+<!-- <h1 style="text-align: center; padding-top: 4%;">Student Details</h1>
+<div style="text-align:center; align-items: center;padding-top: 50px;cursor:pointer">
+<-- table-striped -->
+  <!-- <table class="center table-hover content-table;">
+    <thead>
+      <tr style="text-align: center;">
+        <th>Stduent ID</th>
+        <th>Student Name</th>
+        <th>Department</th>
+        <th>Attendance</th>
+        <th>Book Wanted</th>
+        <th>Reason(Mention any thesis)</th>
+        <th>Preferred Author</th>
+      </tr>
+    </thead>
+</table>
+</div> --> 
+
+<h1 style="text-align: center; padding-top: 4%;">Student Details</h1>
+<div style="text-align:center; align-items: center;padding-top: 50px;cursor:pointer">
+<div class="tab-content" id="myTabContent">
+    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+      <table class="table" class="table table-bordered">
+        <thead class="table-dark">
+          <tr>
+            <th>Stduent ID</th>
+        <th>Student Name</th>
+        <th>Department</th>
+        <th>Attendance</th>
+        <th>Book Wanted</th>
+        <th>Reason(Mention any thesis)</th>
+        <th>Preferred Author</th>
+          </tr>
+        </thead>
+        <tbody>
+            
+          <tr *ngFor="let record of fakeData" >
+            <th scope="row">{{record.id}}</th>
+            <td>{{record.Name}}</td>
+            <td>{{record.dept}}</td>
+            <td>{{record.attendance}}</td>
+            <td>{{record.book}}</td>
+            <td>{{record.reason}}</td>
+            <td>{{record.author}}</td>
+
+            
+          </tr>
+          
+        </tbody>
+      </table>
+    </div>
+    </div>
+    </div>

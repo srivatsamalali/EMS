@@ -1,8 +1,12 @@
 export interface Case {
     id:number;
     Name:string;
-    Case:string;
-    Contact:string;
+    dept:string;
+    attendance:number;
+    book:string;
+    reason:string;
+    author:string;
+
 
     
 

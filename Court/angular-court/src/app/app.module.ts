@@ -9,15 +9,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { CaseComponent } from './case/case.component';
 import { SimpleformComponent } from './simpleform/simpleform.component';
 import { LoginComponent } from './login/login.component';
-
-const routes: Routes = [
-  { path: '', component: DashboardComponent },
-  {
-    path: ':caseId', component: CaseComponent,
-
-  }
-
-];
+import { ButtonComponent } from './button/button.component';
+import { StudentComponent } from './student/student.component';
+import { LecturerComponent } from './lecturer/lecturer.component';
 
 
 @NgModule({
@@ -25,12 +19,14 @@ const routes: Routes = [
     AppComponent,
     DashboardComponent,
     LoginComponent,
-    SimpleformComponent
+    SimpleformComponent,
+    ButtonComponent,
+    StudentComponent,
+    LecturerComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot(routes),
     FormsModule,
     ReactiveFormsModule
   ],

@@ -1,50 +1,10 @@
-<div>
+<!-- ======= Hero Section ======= -->
+<section id="hero" class="d-flex align-items-center">
+  <div class="container text-center position-relative" data-aos="fade-in" data-aos-delay="200">
+    <h1>Your New Online Presence with Edu Class</h1>
+    <h2>We are team of talented Guides working together to bring up new talents</h2>
+    
+    <a href="/list" class="btn btn-info" role="button">Get Started</a>
 
-    <ul class="nav nav-tabs" id="myTab" role="tablist" class="nav nav-pills">
-      <li class="nav-item" role="presentation">
-        <a class="nav-link " id="home-tab" data-bs-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Case Details</a>
-      </li>
-      <li class="nav-item" role="presentation">
-        <a class="nav-link" id="profile-tab" data-bs-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Profile</a>
-      </li>
-      <li class="nav-item" role="presentation">
-        <a class="nav-link" id="contact-tab" data-bs-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Contact</a>
-      </li>
-    </ul>
-    <div class="tab-content" id="myTabContent">
-      <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-        <table class="table" class="table table-bordered">
-          <thead class="table-dark">
-            <tr>
-              <th scope="col">Sl.No</th>
-              <th scope="col">Name</th>
-              <th scope="col">Case</th>
-              <th scope="col">Contact</th>
-              <th scope="col">Details</th>
-            </tr>
-          </thead>
-          <tbody>
-
-            <tr *ngFor="let record of fakeData" >
-              <th scope="row">{{record.id}}</th>
-              <td>{{record.Name}}</td>
-              <td>{{record.Case}}</td>
-              <td>{{record.Contact}}</td>
-              <td><button class="btn btn-primary" [routerLink]="['./',record.id]">Case</button></td>
-            </tr>
-
-          </tbody>
-        </table>
-      </div>
-      <!--div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div-->
-      <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-        <!-- <table class="table" class="table table-bordered" class="table table-striped">
-            <thead class="table-dark">
-
-
-          </table> -->
-      </div>
-    </div>
-
-
-    </div>
+  </div>
+</section><!-- End Hero -->

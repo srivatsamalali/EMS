@@ -10,24 +10,33 @@ export class FakedataService {
     {
         id:1,
         Name:'John',
-        Case:'Divorse Case',
-        Contact:'87876656'
+        dept:'EEE',
+        attendance:87,
+        book:'Wings of Fire',
+        reason:'To read',
+        author:'A.P.J.AbdulKalam'
        
     },
 
     {
       id:2,
       Name:'Peter',
-      Case:'Property Case',
-      Contact:'867659876'
+      dept:'E & C',
+      attendance:87,
+      book:'Wings of Fire',
+      reason:'To read',
+      author:'A.P.J.AbdulKalam'
      
   },
 
   {
-    id:3,
-    Name:'Alen',
-    Case:'Murder Case',
-    Contact:'86545434567'
+        id:3,
+        Name:'Thomas',
+        dept:'CSE',
+        attendance:87,
+        book:'Wings of Fire',
+        reason:'To read',
+        author:'A.P.J.AbdulKalam'
    
 }
 

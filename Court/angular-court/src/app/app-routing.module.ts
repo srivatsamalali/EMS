@@ -2,6 +2,10 @@ import { LoginComponent } from './login/login.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { ButtonComponent } from './button/button.component';
+import { SimpleformComponent } from './simpleform/simpleform.component';
+import { StudentComponent } from './student/student.component';
+import { LecturerComponent } from './lecturer/lecturer.component';
 
 const routes: Routes = [
 
@@ -13,8 +17,15 @@ const routes: Routes = [
   // { path: 'manager', component: ManagerComponent, canActivate: [AuthGuard] },
   // { path: 'approveReject', component: ApproveRejectComponent, canActivate: [AuthGuard] },
   // { path: 'pendingLeaves', component: PendingLeavesComponent, canActivate: [AuthGuard] },
+  {path:'', redirectTo:'dashboard', pathMatch:'full'},
   { path: 'login', component: LoginComponent },
+
   { path: 'dashboard', component: DashboardComponent },
+  { path: 'list', component: ButtonComponent },
+  { path: 'simpleform', component: SimpleformComponent},
+  { path: 'student', component: StudentComponent},
+  { path: 'lecture', component: LecturerComponent},
+
 
   // otherwise redirect to home
   { path: '**', redirectTo: '' }
