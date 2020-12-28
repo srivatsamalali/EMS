@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+    background: #f2f2f2;
+}
+.wrapper{
+    background-color: #fff;
+    width: 500px;
+    padding: 25px;
+    margin: 50px auto 0;
+    border-top: 5px solid #6a5acd;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+
+}
+.wrapper h2{
+    font-size: 24px;
+    line-height: 24px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+.input-name{
+    width: 90%;
+    position: relative;
+    margin: 20px auto;
+}
+.lock{
+    padding: 8px 11px;
+}
+.lock{
+    padding: 8px 11px;
+}
+.lock{
+    padding: 8px 6px;
+}
+.fa-user{
+    padding: 8px 11px;
+}
+.name{
+    width: 100%;
+    padding: 8px 0 8px 40px;
+}
+ /* .input name span{
+    margin-left: 35px;
+}*/
+.cname{
+    width: 100%;
+    padding: 8px 0 8px 40px;
+}
+.sname{
+    width: 100%;
+    padding: 8px 0 8px 40px;
+}
+.gname{
+   width: 100%;
+    padding: 8px 0 8px 40px;
+
+}
+.button{
+   background-color: #0000ff; 
+   height: 35px;
+   line-height: 35px;
+   width: 100%;
+   border: none;
+   outline: none;
+   cursor: pointer;
+   color: #fff;
+   font-size: 18px;
+   margin-bottom: 10px;
+}
+.text-name{
+    width: 100%;
+    padding: 8px 0 8px 40px;
+}
+.input-name i{
+    position: absolute;
+    font-size: 18px;
+    border-right: 1px solid #cccccc;
+}
+.email{
+    padding: 8px;
+}
+/*.text-name name{
+    border: 1px solid #cccccc;
+    outline: none;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    transition: all 0.30s ease-in-out;
+}
+.text-name:hover, .name:hover{
+   background-color: #fafafa; 
+}
+.text-name:focus, .name:focus{
+    -webkit-box-shadow: 0 0 2px 1px rgba(255,169,0,0.5);
+    -moz-box-shadow: 0 0 2px 1px rgba(255,169,0,0.5);
+    box-shadow:  0 0 2px 1px rgba(255,169,0,0.5);
+    border: 1px solid #F00;
+    background: #fafafa;
+}*/
