@@ -124,5 +124,8 @@
       }
     }
   },
-  "defaultProject": "angular-court"
+  "defaultProject": "angular-court",
+  "cli": {
+    "analytics": "8ff1b7fc-afdc-4ab0-afff-e60f02660dfe"
+  }
 }

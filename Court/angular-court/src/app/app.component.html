@@ -1,11 +1,11 @@
-<div class="bg-img">
+<div>
 <div class="container" >
   <div class="row">
     <div class="col-xs-12">
       <h3>Educlass</h3>
       <hr>
 
-      <ul class="nav nav-tabs" id="myTab" role="tablist" class="nav nav-pills"> 
+      <ul class="nav nav-tabs" id="myTab" role="tablist" class="nav nav-pills">
         <li class="nav-item" role="presentation">
           <a class="nav-link active" id="home-tab" data-bs-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">About Us</a>
         </li>
@@ -15,6 +15,9 @@
         <li class="nav-item" role="presentation">
           <a class="nav-link" id="contact-tab" data-bs-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Contact</a>
         </li>
+        <li class="nav-item" role="presentation">
+          <a class="nav-link" href="login" aria-controls="contact">login</a>
+        </li>
       </ul>
       <div class="tab-content" id="myTabContent">
         <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">...</div>
@@ -22,9 +25,10 @@
         <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
       </div>
     </div>
-      <!--router-outlet></router-outlet-->
-       
-    
+
+      <router-outlet></router-outlet>
+
+
   </div>
 </div>
 </div>
