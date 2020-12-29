@@ -1,5 +1,7 @@
+<section id="hero" class="d-flex align-items-center">
+  <div class="container text-center position-relative">
 <body style="align-items: center;">
-  <h1 style="padding-left:160px ;">Login Page</h1>
+  <h1 style="padding-left:160px ;"></h1>
     <div *ngIf="error" class="alert alert-danger">{{ error }}</div>
     <h2 id="h2">Student Login</h2>
     <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
@@ -23,3 +25,5 @@
       </div>
     </form>
   </body>
+  </div>
+  </section>

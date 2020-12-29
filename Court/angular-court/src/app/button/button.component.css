@@ -128,7 +128,7 @@ button.btn-default:before {
         color:white;
         width: 100%;
         height: 80vh;
-        background: url(../../assets/hero-bg.jpg) center center;
+        background: url(../../assets/abc.jpg) center center;
         background-size: cover;
         position: relative;
     }
