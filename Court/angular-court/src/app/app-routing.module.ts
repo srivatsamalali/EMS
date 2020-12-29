@@ -1,3 +1,4 @@
+import { LecturerloginComponent } from './lecturerlogin/lecturerlogin.component';
 import { LoginComponent } from './login/login.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
@@ -6,6 +7,7 @@ import { ButtonComponent } from './button/button.component';
 import { SimpleformComponent } from './simpleform/simpleform.component';
 import { StudentComponent } from './student/student.component';
 import { LecturerComponent } from './lecturer/lecturer.component';
+
 
 const routes: Routes = [
 
@@ -25,6 +27,7 @@ const routes: Routes = [
   { path: 'simpleform', component: SimpleformComponent},
   { path: 'student', component: StudentComponent},
   { path: 'lecture', component: LecturerComponent},
+  { path: 'leclogin', component: LecturerloginComponent},
 
 
   // otherwise redirect to home
