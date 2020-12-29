@@ -18,12 +18,23 @@ export class DashboardComponent implements OnInit {
   error!: string;
   studUsername!: string;
   studPassword!: string;
-  
-  
+
+
   constructor(private dataService:FakedataService ,
   private formBuilder: FormBuilder,
   private route: ActivatedRoute,
   private router: Router,) { }
+
+  getroute(): void {
+    this.router.navigate(['/login']);
+  }
+  getroute1(): void {
+    this.router.navigate(['/simpleform']);
+  }
+  getroute2(): void {
+    this.router.navigate(['/leclogin']);
+  }
+
 
   ngOnInit(): void {
     this.getData();
@@ -31,12 +42,12 @@ export class DashboardComponent implements OnInit {
     this.loginForm = this.formBuilder.group({
       studUsername: ['', [Validators.required, Validators.pattern('^[0-9]*$')]
       ]
-  
+
     });
-  
+
     // get return url from route parameters or default to '/'
     this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
-  
+
   }
 
   getData() {
