@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Case } from '../Services/fakedata';
 import { FakedataService } from '../Services/fakedata.service';
 
@@ -8,10 +10,33 @@ import { FakedataService } from '../Services/fakedata.service';
 })
 export class DashboardComponent implements OnInit {
   fakeData: Case[] = [];
-  constructor(private dataService:FakedataService) { }
+
+  loginForm!: FormGroup;
+  loading = false;
+  submitted = false;
+  returnUrl!: string;
+  error!: string;
+  studUsername!: string;
+  studPassword!: string;
+  
+  
+  constructor(private dataService:FakedataService ,
+  private formBuilder: FormBuilder,
+  private route: ActivatedRoute,
+  private router: Router,) { }
 
   ngOnInit(): void {
     this.getData();
+
+    this.loginForm = this.formBuilder.group({
+      studUsername: ['', [Validators.required, Validators.pattern('^[0-9]*$')]
+      ]
+  
+    });
+  
+    // get return url from route parameters or default to '/'
+    this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
+  
   }
 
   getData() {
@@ -19,4 +44,15 @@ export class DashboardComponent implements OnInit {
 this.fakeData=this.dataService.fakedata();
 console.log(this.fakeData)
   }
+
+  scroll(el: HTMLElement) {
+    el.scrollIntoView({behavior: 'smooth'});
 }
+get f() { return this.loginForm.controls; }
+
+onSubmit() {​​​​​​​​
+this.submitted = true;
+    ​​​​​​this.router.navigate(['/student']);
+    }​​​​​​​​
+  }​​​​​​​​
+

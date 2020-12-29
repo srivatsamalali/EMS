@@ -4,7 +4,57 @@
     <h1>Your New Online Presence with Edu Class</h1>
     <h2>We are team of talented Guides working together to bring up new talents</h2>
     
-    <a href="/list" class="btn btn-info" role="button">Get Started</a>
-
+    <a (click)="scroll(target)" class="btn btn-info" role="button">Get Started</a>
+    
   </div>
 </section><!-- End Hero -->
+
+
+
+
+
+<section id="hero1" #target class="d-flex align-items-center">
+  <div class="container text-center position-relative">
+<div style="text-align:center">
+  <h1 id="h1" style="text-align: center;">
+    Welcome to Student Portal </h1>
+</div>
+<br><br><br>
+
+<br>
+<div class="well text-center">
+<div  class="col-md-2" class="div-padd">
+  <div id="id-class" class="div-again"  tabindex="0">
+    <!-- <svg width="15" height="15" viewBox="0 0 15 15"></svg> -->
+    <button type="button" (click)="getroute()" class="btn btn-hot text-capitalize btn-xs" class="btn btn-success ribbon">Student Login</button>
+  </div>
+  <br>
+
+  <div  class="col-md-2" class="div-class">
+    <div id="id-class" class="div-again"  tabindex="0">
+      <!-- <svg width="24" height="24" viewBox="0 0 24 42"></svg> -->
+      <button type="button" (click)="getroute1()" class="btn btn-hot text-capitalize btn-xs" class="btn btn-success ribbon">Student Register</button>
+      <!--button type="button" class="btn btn-success ribbon">Success</button-->
+  </div>  
+  </div><br>
+  <div  class="col-md-2" class="div-class">
+    <div id="id-class" class="div-again"  tabindex="0">
+      <!-- <svg width="24" height="24" viewBox="0 0 24 42"></svg> -->
+      <button type="button" (click)="getroute2()" class="btn btn-hot text-capitalize btn-xs" class="btn btn-success ribbon">Lecturer Login</button>
+      <!--button type="button" class="btn btn-success ribbon">Success</button-->
+  </div>  
+  </div><br>
+
+    
+  </div>
+  </div>
+</div>
+</section>
+
+
+
+
+
+
+  
+  
