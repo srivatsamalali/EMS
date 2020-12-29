@@ -12,6 +12,7 @@ import { LoginComponent } from './login/login.component';
 import { ButtonComponent } from './button/button.component';
 import { StudentComponent } from './student/student.component';
 import { LecturerComponent } from './lecturer/lecturer.component';
+import { LecturerloginComponent } from './lecturerlogin/lecturerlogin.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { LecturerComponent } from './lecturer/lecturer.component';
     SimpleformComponent,
     ButtonComponent,
     StudentComponent,
-    LecturerComponent
+    LecturerComponent,
+    LecturerloginComponent
   ],
   imports: [
     BrowserModule,

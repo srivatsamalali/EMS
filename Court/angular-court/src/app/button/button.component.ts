@@ -18,7 +18,7 @@ export class ButtonComponent implements OnInit {
     this.router.navigate(['/simpleform']);
   }
   getroute2(): void {
-    this.router.navigate(['/lecture']);
+    this.router.navigate(['/leclogin']);
   }
 
   ngOnInit(): void {

@@ -21,7 +21,7 @@ button:active {
 }
 
 button.ribbon {
-  
+
   outline:none;
   outline-color: transparent;
 }
@@ -56,48 +56,48 @@ button.btn-default:before {
     button.btn-default:after {
   border-color: #757575 transparent #757575 #757575;
     }
-    
-    
-    
+
+
+
     button.btn-primary:before {
   border-color: #2e6da4 #2e6da4 #2e6da4 transparent;
     }
     button.btn-primary:after {
   border-color: #2e6da4 transparent #2e6da4 #2e6da4;
     }
-    
-    
+
+
     button.btn-success:before {
   border-color: #398439 #398439 #398439 transparent;
     }
     button.btn-success:after {
   border-color: #398439 transparent #398439 #398439;
     }
-    
-    
+
+
     button.btn-info:before {
   border-color: #269abc #269abc #269abc transparent;
     }
     button.btn-info:after {
   border-color: #269abc transparent #269abc #269abc;
     }
-    
-    
+
+
     button.btn-warning:before {
   border-color: #d58512 #d58512 #d58512 transparent;
     }
     button.btn-warning:after {
   border-color: #d58512 transparent #d58512 #d58512;
     }
-    
-    
+
+
     button.btn-danger:before {
   border-color: #ac2925 #ac2925 #ac2925 transparent;
     }
     button.btn-danger:after {
   border-color: #ac2925 transparent #ac2925 #ac2925;
     }
-    
+
 
 
 
@@ -113,7 +113,7 @@ button.btn-default:before {
       }
 
       .div-padd {
-        padding-left: 400px;
+        padding-left: 300px;
         width: 500px;
         text-align: center;
 
@@ -144,7 +144,7 @@ button.btn-default:before {
         padding: 60px 0;
         overflow: hidden;
     }
-    
+
     #hero:before {
         content: "";
         background: rgba(0, 0, 0, 0.6);
