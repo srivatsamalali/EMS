@@ -35,25 +35,33 @@ private router: Router,
 
 ngOnInit() {
 
-  this.loginForm = this.formBuilder.group({
-    studUsername: ['', [Validators.required, Validators.pattern('^[0-9]*$')]
-    ]
+//   this.loginForm = this.formBuilder.group({
+//     studUsername: ['', [Validators.required, Validators.pattern('^[0-9]*$')]
+//     ]
 
-  });
+//   });
 
-  // get return url from route parameters or default to '/'
-  this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
+//   // get return url from route parameters or default to '/'
+//   this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
 }
 
 
 
   // convenience getter for easy access to form fields
-  get f() { return this.loginForm.controls; }
+  //get f() { return this.loginForm.controls; }
 
-onSubmit() {​​​​​​​​
-this.submitted = true;
-    ​​​​​​this.router.navigate(['/student']);
-    }​​​​​​​​
+
+  onSubmit(): void {
+    this.router.navigate(['/student']);
+  }
+
+onRegister(): void {
+  this.router.navigate(['/simpleform']);
+}
+
+onLecture(): void {
+  this.router.navigate(['/lecture']);
+}
   }​​​​​​​​
 
 
