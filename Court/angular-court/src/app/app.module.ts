@@ -13,6 +13,8 @@ import { ButtonComponent } from './button/button.component';
 import { StudentComponent } from './student/student.component';
 import { LecturerComponent } from './lecturer/lecturer.component';
 import { LecturerloginComponent } from './lecturerlogin/lecturerlogin.component';
+import { ContactPageComponent } from './contact-page/contact-page.component';
+import { AboutUsComponent } from './about-us/about-us.component';
 
 
 @NgModule({
@@ -24,7 +26,9 @@ import { LecturerloginComponent } from './lecturerlogin/lecturerlogin.component'
     ButtonComponent,
     StudentComponent,
     LecturerComponent,
-    LecturerloginComponent
+    LecturerloginComponent,
+    ContactPageComponent,
+    AboutUsComponent
   ],
   imports: [
     BrowserModule,

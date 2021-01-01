@@ -15,7 +15,7 @@
       </tr>
     </thead>
 </table>
-</div> --> 
+</div> -->
 <section id="hero1" class="d-flex align-items-center">
   <div class="container text-center position-relative">
 <h1 style="text-align: center; padding-top: 4%;">Student Details</h1>
@@ -32,10 +32,11 @@
         <th>Book Wanted</th>
         <th>Reason(Mention any thesis)</th>
         <th>Preferred Author</th>
+        <th>click here to request books</th>
           </tr>
         </thead>
         <tbody>
-            
+
           <tr *ngFor="let record of fakeData" >
             <th scope="row">{{record.id}}</th>
             <td>{{record.Name}}</td>
@@ -45,9 +46,9 @@
             <td>{{record.reason}}</td>
             <td>{{record.author}}</td>
 
-            
+        <td><button>click me</button></td>
           </tr>
-          
+
         </tbody>
       </table>
     </div>

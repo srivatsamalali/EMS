@@ -7,6 +7,8 @@ import { ButtonComponent } from './button/button.component';
 import { SimpleformComponent } from './simpleform/simpleform.component';
 import { StudentComponent } from './student/student.component';
 import { LecturerComponent } from './lecturer/lecturer.component';
+import { ContactPageComponent } from './contact-page/contact-page.component';
+import { AboutUsComponent } from './about-us/about-us.component';
 
 
 const routes: Routes = [
@@ -28,6 +30,8 @@ const routes: Routes = [
   { path: 'student', component: StudentComponent},
   { path: 'lecture', component: LecturerComponent},
   { path: 'leclogin', component: LecturerloginComponent},
+  { path: 'ContactPage', component: ContactPageComponent},
+  { path: 'AboutUs', component: AboutUsComponent},
 
 
   // otherwise redirect to home
