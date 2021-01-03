@@ -1,3 +1,4 @@
+
 import { LecturerloginComponent } from './lecturerlogin/lecturerlogin.component';
 import { LoginComponent } from './login/login.component';
 import { NgModule } from '@angular/core';
@@ -9,6 +10,8 @@ import { StudentComponent } from './student/student.component';
 import { LecturerComponent } from './lecturer/lecturer.component';
 import { ContactPageComponent } from './contact-page/contact-page.component';
 import { AboutUsComponent } from './about-us/about-us.component';
+import { LibraryComponent } from './library/library.component';
+import { ActivityFormComponent } from './activity-form/activity-form.component';
 
 
 const routes: Routes = [
@@ -32,6 +35,9 @@ const routes: Routes = [
   { path: 'leclogin', component: LecturerloginComponent},
   { path: 'ContactPage', component: ContactPageComponent},
   { path: 'AboutUs', component: AboutUsComponent},
+  { path: 'library', component: LibraryComponent},
+  { path: 'activity', component: ActivityFormComponent},
+
 
 
   // otherwise redirect to home

@@ -15,6 +15,10 @@ import { LecturerComponent } from './lecturer/lecturer.component';
 import { LecturerloginComponent } from './lecturerlogin/lecturerlogin.component';
 import { ContactPageComponent } from './contact-page/contact-page.component';
 import { AboutUsComponent } from './about-us/about-us.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LibraryComponent } from './library/library.component';
+import { ActivityFormComponent } from './activity-form/activity-form.component';
+
 
 
 @NgModule({
@@ -28,13 +32,16 @@ import { AboutUsComponent } from './about-us/about-us.component';
     LecturerComponent,
     LecturerloginComponent,
     ContactPageComponent,
-    AboutUsComponent
+    AboutUsComponent,
+    LibraryComponent,
+    ActivityFormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
