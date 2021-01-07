@@ -1,23 +1,3 @@
-<section id="hero1" class="d-flex align-items-center">
-  <div class="container text-center position-relative">
-
-<h1 style="text-align: center; padding-top: 4%;">Lecturer Details</h1>
-<div style="text-align:center; align-items: center;padding-top: 50px;cursor:pointer">
-<!-- table-striped -->
-  <table class="center table-hover content-table;">
-    <thead>
-      <tr style="text-align: center;">
-        <th>Lecturer ID</th>
-        <th>Lecturer Name</th>
-        <th>Department</th>
-        <th>Attendance of the person</th>
-        <th>Marks sheet</th>
-        <th>Suggestion or Assignment</th>
-      </tr>
-    </thead>
-  </table>
-</div>
-
 
 
 
@@ -31,31 +11,65 @@
           <tr>
             <th>Stduent ID</th>
         <th>Student Name</th>
-        <th>Department</th>
-        <th>Attendance</th>
-        <th>Book Wanted</th>
-        <th>Reason(Mention any thesis)</th>
-        <th>Preferred Author</th>
+        <th>Contact</th>
+        <th>Semester</th>
+        <th>Email</th>
+        <th>Address</th>
+        <th>Edit</th>
           </tr>
         </thead>
         <tbody>
-            
-          <tr *ngFor="let record of fakeData" >
-            <th scope="row">{{record.id}}</th>
-            <td>{{record.Name}}</td>
-            <td>{{record.dept}}</td>
-            <td>{{record.attendance}}</td>
-            <td>{{record.book}}</td>
-            <td>{{record.reason}}</td>
-            <td>{{record.author}}</td>
 
-            
+          <tr *ngFor="let record of studentsList" >
+            <th scope="row">{{record.id}}</th>
+            <td>{{record.name}}</td>
+            <td>{{record.contact}}</td>
+            <td>{{record.semester}}</td>
+            <td>{{record.email}}</td>
+            <td>{{record.address}}</td>
+            <td><button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+              (click)="editDetails(record.id,record.name,record.email)">Edit</button></td>
+
+
           </tr>
-          
+
         </tbody>
       </table>
     </div>
     </div>
     </div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Student Edit Page</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form #fom="ngForm">
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Id</label>
+            <input type="number" class="form-control" value={{id}} [(ngModel)]="id" name="id" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email address</label>
+            <input type="email" class="form-control" [(ngModel)]="email" value={{email}} name="email" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Name</label>
+            <input type="text" class="form-control" [(ngModel)]="name" value={{name}} name="name" id="exampleInputPassword1">
+          </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" (click)="editStudent()" data-bs-dismiss="modal">Submit</button>
+      </div>
+    </form>
+
+    </div>
+  </div>
 </div>
-</section>

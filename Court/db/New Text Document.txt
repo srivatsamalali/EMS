@@ -1,0 +1,22 @@
+use sample;
+drop table student;
+
+select * from student;
+create table contact(name varchar(30),email varchar(30),subject varchar(30),message varchar(500));
+insert into contact values("jack","jack@gmail.com","sick","dur to corona");
+
+create table book(bid int primary key,bname varchar(100),author varchar(50),price int,description varchar(200));
+insert into book values(2001,'Fundamentals of Computer Programming','Svetkin Nakov',900,'This book covers the fundamental aspects of computer system');
+insert into book values(2002,'Data Structures','Thomas H. Cormen',699,'This Algorithm book offers solutions to various complex DS');
+insert into book values(2003,'Computer Networks','Andrew S. Tanenbaum',200,'This book is an introduction to computer networking ');
+insert into book values(2004,'Computer Architecture','John Hennessy',90,'Fifth Edition focuses on exploring new ways in which cloud is accessed');
+select * from book;
+
+Create table Student(Id int primary key,password varchar(30),Name Varchar(20),Address varchar(20),Semester int,Contact Varchar(20),Email Varchar(100));
+Insert into Student Values(2,"esh","Eswar","Pune",7,"345678912","eswar@gmail.com");
+SET GLOBAL time_zone = '+5:30';
+Select * from student;
+
+drop table book;
+drop table contact;
+drop table student;

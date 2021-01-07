@@ -2,33 +2,32 @@
       <div class="wrapper">
         <h2>Registration Form</h2>
         <div class="form-conteniar">
-         <form>
+         <form #fom="ngForm">
              <div class="input-name">
                  <i class="fa fa-user lock"></i>
-                 <input type="text" placeholder="Student ID" class="name">
+                 <!-- <input type="text" placeholder="Student ID" class="name" name="id" [(ngModel)]="id"> -->
                  </div>
-                <!--<span>
-                     <i class="fa fa-user lock"></i>
-                     <input type="text" placeholder="Number of Leaves" class="name">
-                 </span>-->
                  <div class="input-name">
                      <i class="fa fa-user lock"></i>
-                     <input type="text" placeholder="Student name" required class="text-name">
+                     <input type="text" placeholder="Student name" required class="text-name" name="name" [(ngModel)]="name">
                  </div>
                  <div class="input-name">
                     <i class="fa fa-user"></i>
-                    <input type="text" placeholder="Gender" required class="gname">
-                   </div>
-                 <div class="input-name">
-                    <i class="fa fa-user lock"></i>
-                    <input type="text" placeholder="Student Department" required class="cname">
+                    <input type="text" placeholder="email" required class="gname" name="email" [(ngModel)]="email">
                    </div>
                    <div class="input-name">
                     <i class="fa fa-user lock"></i>
-                    <input type="email" placeholder="Student email" required class="sname">
+                    <input type="text" placeholder="Password" required class="cname" name="password" [(ngModel)]="password">
                    </div>
+
+
                    <div class="input-name">
-                       <input class="button" type="submit" value="Register">
+                    <i class="fa fa-user lock"></i>
+                    <input type="text" placeholder="number" required class="cname" name="number" [(ngModel)]="number">
+                   </div>
+
+                   <div class="input-name">
+                       <input class="button" type="submit" value="Register" (click)="insertStudent()">
                    </div>
          </form>
     </div>

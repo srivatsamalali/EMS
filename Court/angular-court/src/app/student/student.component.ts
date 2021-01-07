@@ -1,3 +1,4 @@
+import { StudentService } from './../Services/student.service';
 import { Component, OnInit } from '@angular/core';
 import { Case } from '../Services/fakedata';
 import { FakedataService } from '../Services/fakedata.service';
@@ -8,18 +9,32 @@ import { FakedataService } from '../Services/fakedata.service';
   styleUrls: ['./student.component.css']
 })
 export class StudentComponent implements OnInit {
+
+  student: any;
+
   fakeData: Case[] = [];
-  constructor(private dataService:FakedataService) { }
+  constructor(private dataService:FakedataService,
+    private studentService: StudentService) { }
 
   ngOnInit(): void {
     this.getData();
+    this.getStudent(2);
   }
 
   getData() {
-    
-this.fakeData=this.dataService.fakedata();
-console.log(this.fakeData)
+  this.fakeData=this.dataService.fakedata();
+  console.log(this.fakeData)
   }
+
+  getStudent(id: number){
+    this.studentService.getStudent(id).subscribe(result=>{
+      console.log(result);
+      this.student=result;
+    })
+  }
+
+
+
 }
 
 

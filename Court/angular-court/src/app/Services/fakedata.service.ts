@@ -14,8 +14,9 @@ export class FakedataService {
         attendance:87,
         book:'Wings of Fire',
         reason:'To read',
-        author:'A.P.J.AbdulKalam'
-       
+        author:'A.P.J.AbdulKalam',
+        password:1234
+
     },
 
     {
@@ -25,8 +26,9 @@ export class FakedataService {
       attendance:87,
       book:'Wings of Fire',
       reason:'To read',
-      author:'A.P.J.AbdulKalam'
-     
+      author:'A.P.J.AbdulKalam',
+      password:1234
+
   },
 
   {
@@ -36,12 +38,13 @@ export class FakedataService {
         attendance:87,
         book:'Wings of Fire',
         reason:'To read',
-        author:'A.P.J.AbdulKalam'
-   
+        author:'A.P.J.AbdulKalam',
+        password:1234
+
 }
 
 ]
-  constructor() { 
+  constructor() {
 
   }
 

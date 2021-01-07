@@ -6,8 +6,9 @@ export interface Case {
     book:string;
     reason:string;
     author:string;
+    password: number;
 
 
-    
+
 
 }

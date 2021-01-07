@@ -18,6 +18,7 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LibraryComponent } from './library/library.component';
 import { ActivityFormComponent } from './activity-form/activity-form.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -41,7 +42,9 @@ import { ActivityFormComponent } from './activity-form/activity-form.component';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
