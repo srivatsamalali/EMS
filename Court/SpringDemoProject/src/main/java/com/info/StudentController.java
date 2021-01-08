@@ -5,7 +5,6 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
-//import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -23,22 +22,12 @@ public class StudentController {
 	@Autowired
 	StudentService service;
 
-
-
-	 @GetMapping("/student")
-	public List<Student> getAllStudent() {
+	@GetMapping("/student")
+	public List<Student> getAllStudents() {
 		List<Student> bk = service.getAllStudent();
 		return bk;
-	}
 
-//	  @PostMapping("/login")
-//	  public AuthModel studentlogin(@RequestBody AuthModel result) {
-//		  int student_id=result.getId();
-//		  String student_password=result.getPassword();
-//		  boolean isAuth=false;
-//		  Optional<Student> checkid=service.getStudent(student_id);
-//		  Student id=checkid.get;
-//	  }
+	}
 
 	@GetMapping("/student/{Id}")
 	public Optional<Student> getStudent(@PathVariable("Id") int Id) {
@@ -46,13 +35,9 @@ public class StudentController {
 		return bk1;
 	}
 
-//	  @PostMapping("/contact")
-//	  public 
-//	  
-
-	@PutMapping("/student/{id}")
-	public String updateStudent(@RequestBody Student student, @PathVariable int id) {
-		String msg = service.update(student, id);
+	@PutMapping("/student/update/{Id}")
+	public String updateStudent(@RequestBody Student student, @PathVariable int Id) {
+		String msg = service.update(student, Id);
 		return msg;
 	}
 
@@ -63,8 +48,8 @@ public class StudentController {
 	}
 
 	@DeleteMapping("/student/{id}")
-	public String delete(@RequestBody Student student, @PathVariable int id) {
-		String msg = service.delete(student, id);
+	public int delete(@PathVariable int id) {
+		int msg = service.delete(id);
 		return msg;
 	}
 

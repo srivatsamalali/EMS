@@ -26,7 +26,12 @@ export class StudentService {
   }
 
   editStudent(id: number,body:any){
-    return this.http.put("http://localhost:8942/api/student/"+id,body);
+    return this.http.put("http://localhost:8942/api/student/update/"+id,body);
   }
+
+  delete(id:any){
+    return this.http.delete("http://localhost:8942/api/student/"+id)
+  }
+
 
 }

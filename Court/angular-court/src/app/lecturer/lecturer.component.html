@@ -15,7 +15,10 @@
         <th>Semester</th>
         <th>Email</th>
         <th>Address</th>
+        <th>Fees</th>
+        <th>Result</th>
         <th>Edit</th>
+        <th>Delete</th>
           </tr>
         </thead>
         <tbody>
@@ -27,12 +30,12 @@
             <td>{{record.semester}}</td>
             <td>{{record.email}}</td>
             <td>{{record.address}}</td>
+            <td>{{record.fees}}</td>
+            <td>{{record.result}}</td>
             <td><button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
-              (click)="editDetails(record.id,record.name,record.email)">Edit</button></td>
-
-
+              (click)="editDetails(record.id,record.name,record.email,record.semester,record.fees,record.result,record.address,record.contact)">Edit</button></td>
+            <td><button class="btn btn-danger" (click)="delete(record.id)">Delete</button></td>
           </tr>
-
         </tbody>
       </table>
     </div>
@@ -62,6 +65,26 @@
           <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label">Name</label>
             <input type="text" class="form-control" [(ngModel)]="name" value={{name}} name="name" id="exampleInputPassword1">
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Semester</label>
+            <input type="text" class="form-control" [(ngModel)]="semester" value={{semester}} name="semester" id="exampleInputPassword1">
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Fees</label>
+            <input type="text" class="form-control" [(ngModel)]="fees" value={{fees}} name="fees" id="exampleInputPassword1">
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Result</label>
+            <input type="text" class="form-control" [(ngModel)]="result" value={{result}} name="result" id="exampleInputPassword1">
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Contact</label>
+            <input type="text" class="form-control" [(ngModel)]="number" value={{number}} name="number" id="exampleInputPassword1">
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Address</label>
+            <input type="text" class="form-control" [(ngModel)]="address" value={{address}} name="address" id="exampleInputPassword1">
           </div>
 
       <div class="modal-footer">

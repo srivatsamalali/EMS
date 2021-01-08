@@ -14,12 +14,12 @@
                       <div class="col-lg-10 col-xl-7 mx-auto">
                           <h3 class="display-4">Student Login</h3><br><br>
 
-                          <form>
+                          <form #fom="ngForm">
                               <div class="form-group mb-3">
-                                  <input id="text" type="text" placeholder="User Name" required="" autofocus="" class="form-control rounded-pill border-0 shadow-sm px-4">
+                                  <input id="text" type="text" placeholder="User Name" required="" [(ngModel)]="userName" name="userName" autofocus="" class="form-control rounded-pill border-0 shadow-sm px-4">
                               </div>
                               <div class="form-group mb-3">
-                                  <input id="inputPassword" type="password" placeholder="Password" required="" class="form-control rounded-pill border-0 shadow-sm px-4 text-primary">
+                                  <input id="inputPassword" type="password" placeholder="Password" [(ngModel)]="password" name="password" required="" class="form-control rounded-pill border-0 shadow-sm px-4 text-primary">
                               </div>
                               <div class="custom-control custom-checkbox mb-3">
                                   <input id="customCheck1" type="checkbox" checked class="custom-control-input">

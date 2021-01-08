@@ -16,9 +16,10 @@ export class StudentComponent implements OnInit {
   constructor(private dataService:FakedataService,
     private studentService: StudentService) { }
 
+   b=localStorage.getItem('student');
   ngOnInit(): void {
     this.getData();
-    this.getStudent(2);
+    this.getStudent();
   }
 
   getData() {
@@ -32,8 +33,6 @@ export class StudentComponent implements OnInit {
       this.student=result;
     })
   }
-
-
 
 }
 
