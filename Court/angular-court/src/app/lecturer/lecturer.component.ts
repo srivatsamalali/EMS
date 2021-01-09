@@ -64,8 +64,12 @@ console.log(this.fakeData)
   }
     this.studentService.editStudent(this.id,studentDetails).subscribe(result=>{
       console.log(result);
+
     })
+    this.delete(this.id);
+
   }
+
 
   delete(id:any){
 this.studentService.delete(id).subscribe(r=>{

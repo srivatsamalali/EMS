@@ -37,6 +37,7 @@ const routes: Routes = [
   { path: 'AboutUs', component: AboutUsComponent},
   { path: 'library', component: LibraryComponent},
   { path: 'activity', component: ActivityFormComponent},
+  { path: 'registration', component: SimpleformComponent},
 
 
 

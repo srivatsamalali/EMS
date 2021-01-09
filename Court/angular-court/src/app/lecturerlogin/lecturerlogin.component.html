@@ -1,25 +1,24 @@
-<body style="align-items: center;">
+
+<div class="container">
   <h1 style="padding-left:160px ;">Login Page</h1>
     <div *ngIf="error" class="alert alert-danger">{{ error }}</div>
     <h2 id="h2">Lecturer Login</h2>
-    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-      <div class="form-group">
-        <!-- <h6 class="thistitle">Enter your Student name: </h6>
-        <input type="text" >
-        <h6 class="thistitle">Enter your Student Password : </h6>
-        <input type="password" > -->
-
-        <input type="text" placeholder="name" formControlName="studUsername" class="form-control"
-       />
-
-
-        <input type="password" placeholder="password" formControlName="studPassword" class="form-control"
-        />
-
-        <button [disabled]="loading" class="btn btn-primary">
-          <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+    <form #fom="ngForm">
+      <div class="form-group mb-3">
+        <input id="text" type="text" placeholder="User Name" required="" [(ngModel)]="userName" name="userName" autofocus="" class="form-control rounded-pill border-0 shadow-sm px-4">
+    </div>
+    <div class="form-group mb-3">
+        <input id="inputPassword" type="password" placeholder="Password" [(ngModel)]="password" name="password" required="" class="form-control rounded-pill border-0 shadow-sm px-4 text-primary">
+    </div>
+    <div class="custom-control custom-checkbox mb-3">
+        <input id="customCheck1" type="checkbox" checked class="custom-control-input">
+        <label for="customCheck1" class="custom-control-label">Remember password</label>
+    </div>
+        <button [disabled]="loading" class="btn btn-primary" (click)="loginlecture()">
+          <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1" ></span>
           Login
         </button><br>
-      </div>
+
     </form>
-  </body>
+  </div>
+

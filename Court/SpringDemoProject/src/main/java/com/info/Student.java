@@ -13,16 +13,26 @@ public class Student {
 	private String Name;
 	private String Address;
 	private String password;
+	private String role;
+	
+
 
 	@Override
 	public String toString() {
-		return "Student [Id=" + Id + ", Name=" + Name + ", Address=" + Address + ", password=" + password
-				+ ", Semester=" + Semester + ", Contact=" + Contact + ", Email=" + Email + ", Fees=" + Fees
+		return "Student [Id=" + Id + ", Name=" + Name + ", Address=" + Address + ", password=" + password + ", role="
+				+ role + ", Semester=" + Semester + ", Contact=" + Contact + ", Email=" + Email + ", Fees=" + Fees
 				+ ", Attendance=" + Attendance + ", Result=" + Result + "]";
 	}
 
 	public int getFees() {
 		return Fees;
+	}
+	
+	public String getRole() {
+		return role;
+	}
+	public void setRole(String role) {
+		this.role = role;
 	}
 
 	public void setFees(int fees) {

@@ -1,6 +1,9 @@
+import { LectureService } from './../Services/lecture.service';
+import { StudentService } from './../Services/student.service';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
+import { AuthService } from '../Services/auth.service';
 
 @Component({
   selector: 'app-lecturerlogin',
@@ -16,33 +19,73 @@ export class LecturerloginComponent implements OnInit {
   error!: string;
   studUsername!: string;
   studPassword!: string;
+  userName: any;
+  password:any;
+  alllecture:any=[];
+  name:any;
+  number:any;
+  email:any;
+  id: any;
+  fees: any;
+  result:any;
+  address:any;
+  semester:any;
+
+
 
   constructor(
   private formBuilder: FormBuilder,
   private route: ActivatedRoute,
   private router: Router,
+  private auth:AuthService,
+  private lectureService:LectureService,
+  private studentService:StudentService
     ) {​​​​​​​​}​​​​​​​
 
   ngOnInit() {
-
-    this.loginForm = this.formBuilder.group({
-      studUsername: ['', [Validators.required, Validators.pattern('^[0-9]*$')]
-      ]
-
-    });
-
-    // get return url from route parameters or default to '/'
-    this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
+    this.lectureService.getAlllecture().subscribe(r=>{
+      this.alllecture=r;
+      console.log(r);
+    }
+    )
   }
 
+      loginlecture(){
+        this.lectureService.getAlllecture().subscribe(r=>{
+          this.alllecture=r;
+          console.log("credentials",this.userName,this.password)
+          this.alllecture.
+          forEach((lecture: { id:any; name: any; password: any; }) => {
+            if(lecture.name==this.userName && lecture.password==this.password ){
+              this.auth.setAuth();
+              this.auth.storeUser(lecture.id);
+              this.router.navigate(['/lecture']);
+            }
+          });
+        })
+
+      }
 
 
-    // convenience getter for easy access to form fields
-    get f() { return this.loginForm.controls; }
 
-  onSubmit() {​​​​​​​​
-  this.submitted = true;
-      ​​​​​​this.router.navigate(['/lecture']);
-      }​​​​​​​​
+
+      insertStudent(){
+        console.log(this.name);
+        var student={
+          "name":this.name,
+          "email":this.email,
+          "contact":this.number,
+          "password":this.password
+        }
+
+        this.studentService.addStudent(student).subscribe(result=>{
+          console.log(result);
+        })
+
+
+
+      }
+
+      ​​​​​​​​
     }​​​​​​​​
 

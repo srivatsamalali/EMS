@@ -50,10 +50,10 @@ loginStudent(username:any,password:any){
   this.studentService.getAllStudents().subscribe(r=>{
     this.allStudents=r;
     this.allStudents.
-    forEach((student: { id:any; name: any; password: any; }) => {
+    forEach((student: { id:any; name: any; password: any; role:any}) => {
       if(student.name==username && student.password==password ){
         this.auth.setAuth();
-        this.auth.storeStudent(student.id);
+        this.auth.storeUser(student.id,student.role);
         this.router.navigate(['/student']);
       }
     });

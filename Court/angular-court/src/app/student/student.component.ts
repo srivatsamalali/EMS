@@ -16,10 +16,16 @@ export class StudentComponent implements OnInit {
   constructor(private dataService:FakedataService,
     private studentService: StudentService) { }
 
-   b=localStorage.getItem('student');
-  ngOnInit(): void {
+
+
+   ngOnInit(): void {
+
+
+    const id = JSON.parse(localStorage.getItem('user') || '{}');
+
+
     this.getData();
-    this.getStudent();
+    this.getStudent(id);
   }
 
   getData() {

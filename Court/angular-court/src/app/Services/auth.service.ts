@@ -17,12 +17,20 @@ export class AuthService {
     setAuth(){
       this.isAuth=true;
     }
+
+    unsetAuth(){
+      this.isAuth=false;
+    }
+
     loginStudent(){
       return this.isAuth;
     }
 
-    storeStudent(student:any){
-      localStorage.setItem('student',JSON.stringify(student))
+    storeUser(user:any,role:any){
+      localStorage.setItem('user',JSON.stringify(user));
+      localStorage.setItem('role',JSON.stringify(role));
     }
+
+
 
 }
