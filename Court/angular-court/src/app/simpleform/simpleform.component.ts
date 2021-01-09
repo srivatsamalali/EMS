@@ -20,7 +20,7 @@ export class SimpleformComponent implements OnInit {
   address:any;
   role:any;
 
-  constructor(private http:HttpClient,
+  constructor(
     private studentService: StudentService) { }
 
   ngOnInit(): void {

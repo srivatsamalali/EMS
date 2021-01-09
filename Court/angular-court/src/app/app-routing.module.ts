@@ -1,3 +1,4 @@
+import { AddBooksComponent } from './add-books/add-books.component';
 
 import { LecturerloginComponent } from './lecturerlogin/lecturerlogin.component';
 import { LoginComponent } from './login/login.component';
@@ -38,6 +39,7 @@ const routes: Routes = [
   { path: 'library', component: LibraryComponent},
   { path: 'activity', component: ActivityFormComponent},
   { path: 'registration', component: SimpleformComponent},
+  { path: 'addBooks', component: AddBooksComponent},
 
 
 

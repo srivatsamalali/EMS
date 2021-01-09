@@ -19,6 +19,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LibraryComponent } from './library/library.component';
 import { ActivityFormComponent } from './activity-form/activity-form.component';
 import { HttpClientModule } from '@angular/common/http';
+import { AddBooksComponent } from './add-books/add-books.component';
 
 
 
@@ -35,7 +36,8 @@ import { HttpClientModule } from '@angular/common/http';
     ContactPageComponent,
     AboutUsComponent,
     LibraryComponent,
-    ActivityFormComponent
+    ActivityFormComponent,
+    AddBooksComponent
   ],
   imports: [
     BrowserModule,

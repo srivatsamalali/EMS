@@ -17,7 +17,7 @@ export class LibraryService {
   }
 
   insertBooks(book:object){
-    return this.http.get("http://localhost:8931/book"+book);
+    return this.http.post("http://localhost:8931/book",book);
   }
 
   deleteBooks(id:any){

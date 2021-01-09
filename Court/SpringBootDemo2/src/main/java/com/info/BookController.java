@@ -27,10 +27,10 @@ public class BookController {
 		
 	}
 	@PostMapping("/book")
-    public String insertData(@RequestBody Book book)
+    public int insertData(@RequestBody Book book)
     {
         service.insert(book);
-    return "Data inserted";    
+    return 1;    
     }
 	
 	@GetMapping("/book/{bid}")

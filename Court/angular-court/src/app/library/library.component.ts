@@ -1,3 +1,4 @@
+import { Router, RouterModule } from '@angular/router';
 import { LibraryService } from './../Services/library.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -15,7 +16,7 @@ export class LibraryComponent implements OnInit {
 
   bookList: any = [];
 
-  constructor(private libaryService: LibraryService) {}
+  constructor(private libaryService: LibraryService,private router: Router) {}
 
   ngOnInit(): void {
     this.getall();
@@ -33,5 +34,9 @@ export class LibraryComponent implements OnInit {
       console.log(r);
       this.getall();
     });
+  }
+
+  addBooks(){
+    this.router.navigate(['/addBooks'])
   }
 }
