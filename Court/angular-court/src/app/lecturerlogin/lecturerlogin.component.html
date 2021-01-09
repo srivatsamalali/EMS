@@ -1,4 +1,4 @@
-
+<!--
 <div class="container">
   <h1 style="padding-left:160px ;">Login Page</h1>
     <div *ngIf="error" class="alert alert-danger">{{ error }}</div>
@@ -21,4 +21,46 @@
 
     </form>
   </div>
+ -->
 
+
+ <div class="container-fluid">
+  <div class="row no-gutter">
+      <!-- The image half -->
+      <div class="col-md-6 d-none d-md-flex bg-image"></div>
+
+
+      <!-- The content half -->
+      <div class="col-md-6 bg-light">
+          <div class="login d-flex align-items-center py-5">
+
+              <!-- Demo content-->
+              <div class="container">
+                  <div class="row">
+                      <div class="col-lg-10 col-xl-7 mx-auto">
+                          <h3 class="display-4">Lecturer Login</h3><br><br>
+
+                          <form #fom="ngForm">
+                              <div class="form-group mb-3">
+                                  <input id="text" type="text" placeholder="User Name" required="" [(ngModel)]="userName" name="userName" autofocus="" class="form-control rounded-pill border-0 shadow-sm px-4">
+                              </div>
+                              <div class="form-group mb-3">
+                                  <input id="inputPassword" type="password" placeholder="Password" [(ngModel)]="password" name="password" required="" class="form-control rounded-pill border-0 shadow-sm px-4 text-primary">
+                              </div>
+                              <div class="row justify-content-center">
+                              <button type="submit"  (click)="loginlecture()" class="btn btn-primary btn-block text-uppercase mb-2 rounded-pill shadow-sm">Login in</button>
+                                    <br>
+
+                            </div>
+                              <div class="text-center d-flex justify-content-between mt-4"><p>By  <a href="AboutUs" class="font-italic text-muted">
+                                      <u>EduClass</u></a></p></div>
+                          </form>
+                      </div>
+                  </div>
+              </div><!-- End -->
+
+          </div>
+      </div><!-- End -->
+
+  </div>
+</div>

@@ -42,20 +42,13 @@ public class BookService {
     	}
     	return msg;
     }
-    public String delete(int bid)
+    public int delete(int bid)
     {
-        String msg=" ";
-        Optional<Book> s = repo.findById(bid);
-        if(s.isPresent())
-        {
-            repo.deleteById(bid);
-            msg =" data deleted";
-        }
-        else
-        {
-            msg =" data not deleted";
-        }
-        return msg;
+		Optional<Book> s = repo.findById(bid);
+
+		repo.deleteById(bid);
+		return 1;
+
     }
 
 }

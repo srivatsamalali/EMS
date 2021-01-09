@@ -42,9 +42,9 @@ public class StudentController {
 	}
 
 	@PostMapping("/stud")
-	public String insertData(@RequestBody Student student) {
+	public int insertData(@RequestBody Student student) {
 		service.insert(student);
-		return "Data inserted";
+		return 1;
 	}
 
 	@DeleteMapping("/student/{id}")

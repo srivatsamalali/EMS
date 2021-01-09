@@ -1,6 +1,6 @@
 import { StudentService } from './../Services/student.service';
 import { HttpClient } from '@angular/common/http';
-import { ThrowStmt } from '@angular/compiler';
+import { analyzeAndValidateNgModules, ThrowStmt } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
@@ -13,6 +13,12 @@ export class SimpleformComponent implements OnInit {
   number:any;
   email:any;
   password:any;
+  attendance:any;
+  fees:any;
+  result:any;
+  semester:any;
+  address:any;
+  role:any;
 
   constructor(private http:HttpClient,
     private studentService: StudentService) { }
@@ -21,14 +27,20 @@ export class SimpleformComponent implements OnInit {
 
   }
 
-
   insertStudent(){
     console.log(this.name);
     var student={
       "name":this.name,
       "email":this.email,
       "contact":this.number,
-      "password":this.password
+      "password":this.password,
+      "fees":this.fees,
+      "address":this.address,
+      "attendance":this.attendance,
+      "semester":this.semester,
+      "result":this.result,
+      "role":this.role="student"
+
     }
 
     this.studentService.addStudent(student).subscribe(result=>{

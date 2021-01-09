@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "*")
 @RestController
 public class BookController {
 
@@ -46,10 +46,11 @@ public class BookController {
 		String msg = service.update(book, bid);
 		return msg;
 	}
+	
 	  @DeleteMapping("/book/{bid}")
-	     public String delete(@PathVariable int bid)
+	     public int delete(@PathVariable int bid)
 	     {
-	         String msg = service.delete(bid);
+	         int msg = service.delete(bid);
 	         return msg;
 	     }
 }

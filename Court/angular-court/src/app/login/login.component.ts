@@ -26,7 +26,7 @@ private formBuilder: FormBuilder,
 private route: ActivatedRoute,
 private router: Router,
 private studentService:StudentService,
-private auth:AuthService
+public auth:AuthService
   ) {​​​​​​​​}​​​​​​​​
 
 ngOnInit() {
@@ -48,6 +48,7 @@ onLecture(): void {
 
 loginStudent(username:any,password:any){
   this.studentService.getAllStudents().subscribe(r=>{
+
     this.allStudents=r;
     this.allStudents.
     forEach((student: { id:any; name: any; password: any; role:any}) => {

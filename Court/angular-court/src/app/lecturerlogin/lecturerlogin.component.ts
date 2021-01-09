@@ -30,6 +30,7 @@ export class LecturerloginComponent implements OnInit {
   result:any;
   address:any;
   semester:any;
+  attendance: any;
 
 
 
@@ -55,10 +56,10 @@ export class LecturerloginComponent implements OnInit {
           this.alllecture=r;
           console.log("credentials",this.userName,this.password)
           this.alllecture.
-          forEach((lecture: { id:any; name: any; password: any; }) => {
+          forEach((lecture: { id:any; name: any; password: any; role:any}) => {
             if(lecture.name==this.userName && lecture.password==this.password ){
               this.auth.setAuth();
-              this.auth.storeUser(lecture.id);
+              this.auth.storeUser(lecture.id,lecture.role);
               this.router.navigate(['/lecture']);
             }
           });
@@ -75,7 +76,9 @@ export class LecturerloginComponent implements OnInit {
           "name":this.name,
           "email":this.email,
           "contact":this.number,
-          "password":this.password
+          "address":this.address,
+          "result":this.result,
+          "attendance":this.attendance
         }
 
         this.studentService.addStudent(student).subscribe(result=>{
