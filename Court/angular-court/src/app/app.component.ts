@@ -14,16 +14,19 @@ export class AppComponent implements OnInit{
     private route:Router) {}
 
   ngOnInit(): void {
-  //  throw new Error('Method not implemented.');
   }
 
   title = 'angular-court';
 
   userLogout() {
     // remove user from local storage to log user out
-    localStorage.removeItem('student');
+    localStorage.removeItem('user');
     this.auth.unsetAuth();
     this.route.navigate(['/']);
   }
+
+
+
+
 }
 

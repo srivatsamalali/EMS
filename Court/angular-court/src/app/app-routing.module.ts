@@ -12,7 +12,6 @@ import { LecturerComponent } from './lecturer/lecturer.component';
 import { ContactPageComponent } from './contact-page/contact-page.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { LibraryComponent } from './library/library.component';
-import { ActivityFormComponent } from './activity-form/activity-form.component';
 
 
 const routes: Routes = [
@@ -37,7 +36,6 @@ const routes: Routes = [
   { path: 'ContactPage', component: ContactPageComponent},
   { path: 'AboutUs', component: AboutUsComponent},
   { path: 'library', component: LibraryComponent},
-  { path: 'activity', component: ActivityFormComponent},
   { path: 'registration', component: SimpleformComponent},
   { path: 'addBooks', component: AddBooksComponent},
 

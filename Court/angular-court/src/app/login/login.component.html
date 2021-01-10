@@ -25,15 +25,15 @@
                                   <input id="customCheck1" type="checkbox" checked class="custom-control-input">
                                   <label for="customCheck1" class="custom-control-label">Remember password</label>
                               </div>
-
-
-
                               <div class="row justify-content-center">
-
                                 <button type="submit" (click)="onSubmit()"  class="btn btn-primary btn-block text-uppercase mb-2 rounded-pill shadow-sm">Login in</button>
 
+                                <div class="spinner-border" *ngIf="spinner==true" role="status">
+                                  <span class="visually-hidden">Loading...</span>
+                                </div>
                                 <br>
-                              <!-- <button type="submit" (click)="onRegister()" class="btn btn-primary btn-block text-uppercase mb-2 rounded-pill shadow-sm">Register</button> -->
+
+                                <!-- <button type="submit" (click)="onRegister()" class="btn btn-primary btn-block text-uppercase mb-2 rounded-pill shadow-sm">Register</button> -->
                               <br>
                               <button type="submit"  routerLink="/leclogin" class="btn btn-primary btn-block text-uppercase mb-2 rounded-pill shadow-sm">Login in as lecturer</button>
 

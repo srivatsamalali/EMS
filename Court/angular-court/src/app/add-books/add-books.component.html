@@ -3,54 +3,32 @@
       <div class="d-flex flex-lg-row flex-column-reverse">
           <div class="card card1">
               <div class="row justify-content-center my-auto">
+                  <form #fom="ngForm">
                   <div class="col-md-8 col-10 my-5">
                       <div class="row justify-content-center px-3 mb-3"> <img id="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkyrvbQG57461s_LwgPfUFpIAy8t7MuVacjQ&usqp=CAU"> </div>
                       <h3 class="mb-5 text-center heading">EduClass</h3>
                       <h3 class="msg-info">You can add your Books Here</h3>
-                      <!-- <div class="form-group"> <label class="form-control-label text-muted">Book Name</label> <input type="text"  id="bname" name="bname" placeholder="Book Name" class="form-control"> </div>
+                      <div class="form-group"> <label class="form-control-label text-muted">Book Name</label> <input type="text" [(ngModel)]="bname" id="bname" name="bname" placeholder="Book Name"  class="form-control"> </div>
 
 
 
-                      <div class="form-group"> <label class="form-control-label text-muted">Book Author</label> <input type="text" id="author" name="author" placeholder="Book Author" class="form-control"> </div>
+                      <div class="form-group"> <label class="form-control-label text-muted">Book Author</label> <input type="text" id="author" [(ngModel)]="author" name="author" placeholder="Book Author" class="form-control"> </div>
 
                       <div class="form-group"> <label class="form-control-label text-muted">Book Price</label>
                         <i class="fa fa-user lock"></i>
                         <input type ="text" value="Price" class="cname" disabled/>
                       </div>
 
-                      <div class="form-group"> <label class="form-control-label text-muted">Book Description</label> <input type="text-area" id="description" name="description" placeholder="Book Description" class="form-control"> </div> -->
-
-                      <form #fom="ngForm">
-                        <div class="form-group mb-3">
-                            <input id="text" type="text" placeholder="Book Name" required="" [(ngModel)]="bname" name="bname" autofocus="" class="form-control rounded-pill border-0 shadow-sm px-4">
-                        </div>
-                        <div class="form-group mb-3">
-                            <input id="text" type="text" placeholder="Author" [(ngModel)]="author" name="password" required="" class="form-control rounded-pill border-0 shadow-sm px-4 text-primary">
-                        </div>
-
-                        <div class="form-group mb-3">
-                          <i class="fa fa-user lock"></i>
-                            <input id="text" type="text" placeholder="price" [(ngModel)]="price" name="price" class="form-control rounded-pill border-0 shadow-sm px-4 text-primary">
-                        </div>
-
-
-                        <div class="form-group mb-3">
-                            <input id="text" type="text" placeholder="Description" [(ngModel)]="description" name="description" required="" class="form-control rounded-pill border-0 shadow-sm px-4 text-primary">
-                        </div>
-
-
-
-
-
-
+                      <div class="form-group"> <label class="form-control-label text-muted">Book Description</label> <input type="text-area" [(ngModel)]="description" id="description" name="description" placeholder="Book Description" class="form-control"> </div>
 
 
 
                       <div class="row justify-content-center my-3 px-3"> <button class="btn-block btn-color" (click)="insertBooks()">Add Books</button> </div>
-                  <!-- </div>
-              </div>
+                  </div>
+                  </form>
+                </div>
 
-          </div> -->
+          </div>
           <div class="card card2">
               <div class="my-auto mx-md-5 px-md-5 right">
                   <h3 class="text-white" style="text-align: center;">We are here for your knowledge</h3> <small class="text-white"> The Brahmins say that in their books there are many predictions of times in which it will rain. But press those books as strongly as you can, you can not get out of them a drop of water. So you can not get out of all the books that contain the best precepts the smallest good deed.
@@ -58,6 +36,6 @@
 </small>
               </div>
           </div>
-      <!-- </div>
+      </div>
   </div>
-</div> -->
+</div>

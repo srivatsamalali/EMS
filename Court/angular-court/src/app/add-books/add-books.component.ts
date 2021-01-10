@@ -23,9 +23,9 @@ export class AddBooksComponent implements OnInit {
   insertBooks(){
     console.log(this.bname);
     var addbook={
-      "name":this.bname,
+      "bname":this.bname,
       "author":this.author,
-      "price":this.price="0",
+      "price":this.price=0,
       "description":this.description
     }
 

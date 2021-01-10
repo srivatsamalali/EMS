@@ -9,6 +9,7 @@ import { Injectable } from '@angular/core';
 export class AuthService {
 
   isAuth: boolean=false;
+  role:any;
 
   constructor(private studentService:StudentService,
     private http:HttpClient,
@@ -31,6 +32,14 @@ export class AuthService {
       localStorage.setItem('role',JSON.stringify(role));
     }
 
+    isauth(){
+      return localStorage.getItem('user');
+    }
 
+    retRole(){
+      var b= JSON.parse(localStorage.getItem('role')||'{}');
 
+      this.role=b;
+      return b;
+    }
 }
