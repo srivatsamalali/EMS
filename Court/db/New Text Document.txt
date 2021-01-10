@@ -5,17 +5,26 @@ select * from student;
 create table contact(name varchar(30),email varchar(30),subject varchar(30),message varchar(500));
 insert into contact values("jack","jack@gmail.com","sick","dur to corona");
 
-create table book(bid int primary key,bname varchar(100),author varchar(50),price int,description varchar(200));
+drop table book;
+create table book(bid int primary key auto_increment,bname varchar(100),author varchar(50),price int,description varchar(200));
 insert into book values(2001,'Fundamentals of Computer Programming','Svetkin Nakov',900,'This book covers the fundamental aspects of computer system');
 insert into book values(2002,'Data Structures','Thomas H. Cormen',699,'This Algorithm book offers solutions to various complex DS');
 insert into book values(2003,'Computer Networks','Andrew S. Tanenbaum',200,'This book is an introduction to computer networking ');
 insert into book values(2004,'Computer Architecture','John Hennessy',90,'Fifth Edition focuses on exploring new ways in which cloud is accessed');
 select * from book;
 
-Create table Student(Id int primary key,password varchar(30),Name Varchar(20),Address varchar(20),Semester int,Contact Varchar(20),Email Varchar(100));
-Insert into Student Values(2,"esh","Eswar","Pune",7,"345678912","eswar@gmail.com");
+drop table student;
+Create table Student(Id int primary key auto_increment,Name Varchar(20),password varchar(20),Address varchar(20),Semester int,Contact Varchar(20),Email Varchar(100), Fees int,Attendance int, Result float,role varchar(20));
+Insert into Student Values(1,"Sarayu","123","BBSR",7,"123456789","sarayu@gmail.com",100000,70,67.5,"student");
+Insert into Student Values(2,"Eswar","123","Pune",7,"12990089","eswar@gmail.com",100000,70,67.5,"student");
 SET GLOBAL time_zone = '+5:30';
 Select * from student;
+
+drop table lecture;
+
+create table lecture(id int primary key auto_increment, name varchar(50), email varchar(30),password varchar(30),role varchar(20));
+Insert into lecture(id,name,email,password,role) values(1,"jack","jack@gmail.com","321","lecture");
+
 
 drop table book;
 drop table contact;
