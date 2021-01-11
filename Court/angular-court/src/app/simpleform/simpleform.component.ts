@@ -21,7 +21,8 @@ export class SimpleformComponent implements OnInit {
   role:any;
 
   constructor(
-    private studentService: StudentService) { }
+    private studentService: StudentService,
+    private route:Router) { }
 
   ngOnInit(): void {
 
@@ -45,6 +46,7 @@ export class SimpleformComponent implements OnInit {
 
     this.studentService.addStudent(student).subscribe(result=>{
       console.log(result);
+      this.route.navigate(['/lecture'])
     })
 
 
