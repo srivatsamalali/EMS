@@ -1,0 +1,35 @@
+<h1 style="text-align: center; padding-top: 4%;">Library</h1>
+<button type="submit"  routerLink="/addBooks" class="btn btn-primary btn-block text-uppercase mb-2 rounded-pill shadow-sm">Click here to add Books</button>
+<div style="text-align:center; align-items: center;padding-top: 50px;cursor:pointer">
+<div class="tab-content" id="myTabContent">
+
+    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+      <table class="container"  class="table table-dark table-borderless">
+        <thead class="table-dark">
+          <tr>
+            <th>Book ID</th>
+        <th>Book Name</th>
+        <th>Author</th>
+        <th>Price</th>
+        <th>Description</th>
+        <th>Get</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr *ngFor="let record of bookList" >
+            <th scope="row">{{record.bid}}</th>
+            <td>{{record.bname}}</td>
+            <td>{{record.author}}</td>
+            <td>{{record.price}}</td>
+            <td>{{record.description}}</td>
+            <td>
+           <button class="btn btn-primary" (click)="delete(record.bid)">Get Book</button>
+          </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    </div>
+    </div>
+

@@ -1,0 +1,43 @@
+<div class="container px-4 py-5 mx-auto">
+  <div class="card card0">
+      <div class="d-flex flex-lg-row flex-column-reverse">
+          <div class="card card1">
+              <div class="row justify-content-center my-auto">
+                  <form #fom="ngForm">
+                  <div class="col-md-8 col-10 my-5">
+                      <div class="row justify-content-center px-3 mb-3"> <img id="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkyrvbQG57461s_LwgPfUFpIAy8t7MuVacjQ&usqp=CAU"> </div>
+                      <h3 class="mb-5 text-center heading">EduClass</h3>
+                      <h3 class="msg-info">You can add your Books Here</h3>
+                      <div class="form-group"> <label class="form-control-label text-muted">Book Name</label> <input type="text" [(ngModel)]="bname" id="bname" name="bname" placeholder="Book Name"  class="form-control"> </div>
+
+
+
+                      <div class="form-group"> <label class="form-control-label text-muted">Book Author</label> <input type="text" id="author" [(ngModel)]="author" name="author" placeholder="Book Author" class="form-control"> </div>
+
+                      <div class="form-group"> <label class="form-control-label text-muted">Book Price</label>
+                        <i class="fa fa-user lock"></i>
+                        <input type ="text" value="Price" class="cname" disabled/>
+                      </div>
+
+                      <div class="form-group"> <label class="form-control-label text-muted">Book Description</label> <input type="text-area" [(ngModel)]="description" id="description" name="description" placeholder="Book Description" class="form-control"> </div>
+
+
+
+                      <div class="row justify-content-center my-3 px-3"> <button class="btn-block btn-color" (click)="insertBooks()">Add Books</button> </div>
+                  </div>
+                  </form>
+                </div>
+
+          </div>
+          <div class="card card2">
+              <div class="my-auto mx-md-5 px-md-5 right">
+                  <h3 class="text-white" style="text-align: center;">We are here for your knowledge</h3> <small class="text-white">
+                    “I love books. I adore everything about them. I love the feel of the pages on my fingertips. They are light enough to carry, yet so heavy with worlds and ideas. I love the sound of the pages flicking against my fingers. Print against fingerprints. Books make people quiet, yet they are so loud.”
+<br>
+                    – Nnedi Okorafor
+</small>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>

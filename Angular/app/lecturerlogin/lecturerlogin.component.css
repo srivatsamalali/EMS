@@ -1,0 +1,17 @@
+/*
+*
+* ==========================================
+* CUSTOM UTIL CLASSES
+* ==========================================
+*
+*/
+.login,
+.image {
+  min-height: 100vh;
+}
+
+.bg-image {
+  background-image: url('https://portal.fgv.br/sites/portal.fgv.br/files/styles/noticia_geral/public/noticias/06/18/sustentabilidade.jpg?itok=76gIH59s');
+  background-size: cover;
+  background-position: center center;
+}
